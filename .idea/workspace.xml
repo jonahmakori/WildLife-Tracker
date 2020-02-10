@@ -28,6 +28,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -41,5 +44,11 @@
       <updated>1581325110508</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="330" y="47" width="1000" height="846" key="#Project_Structure" timestamp="1581325684466">
+      <screen x="70" y="34" width="1530" height="866" />
+    </state>
+    <state x="330" y="47" width="1000" height="846" key="#Project_Structure/70.34.1530.866@70.34.1530.866" timestamp="1581325684466" />
   </component>
 </project>
