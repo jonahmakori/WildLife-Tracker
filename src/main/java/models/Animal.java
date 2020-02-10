@@ -2,14 +2,14 @@ package models;
 
 import java.util.ArrayList;
 
-public class Animals {
+public class Animal {
     private String name;
     private int id;
     private boolean created = false;
     private boolean added;
-    private static ArrayList<Animals> numberOfAnimals = new ArrayList<>();
+    private static ArrayList<Animal> numberOfAnimals = new ArrayList<>();
 
-    public Animals(String name) {
+    public Animal(String name) {
         this.added = false;
         this.id = numberOfAnimals.size();
         this.name = name;
@@ -30,5 +30,14 @@ public class Animals {
 
     public String getName() {
         return name;
+    }
+    @Override
+    public boolean equals(Object otherAnimal){
+        if(!(otherAnimal instanceof Animal)){
+            return false;
+        }else {
+            Animal newAnimal = (Animal) otherAnimal;
+            return this.getName().equals(newAnimal.getName());
+        }
     }
 }
