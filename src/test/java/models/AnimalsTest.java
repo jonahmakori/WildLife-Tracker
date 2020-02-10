@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class AnimalsTest {
 
     @After
-    void tearDown() {Animals.clearAllAnimals();
+    public void tearDown() {Animals.clearAllAnimals();
     }
     @Test
     public void TestThatInstanceOfAnimalIsCreated(){
@@ -17,5 +17,9 @@ public class AnimalsTest {
         assertEquals(true,testAnimals instanceof Animals);
     }
 
-
+    @Test
+    public void TestThatAnimalInstantiatesWithName_Lion(){
+        Animals testAnimals = new Animals("Lion");
+        assertEquals("Lion",testAnimals.getName());
+    }
 }

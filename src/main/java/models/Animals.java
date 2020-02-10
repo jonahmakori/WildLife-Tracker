@@ -19,12 +19,16 @@ public class Animals {
     public static void clearAllAnimals() {
         numberOfAnimals.clear();
     }
-
-    public boolean isCreated() {
-        return created;
-    }
+//
+//    public boolean isCreated() {
+//        return created;
+//    }
 
     public void setCreated(boolean created) {
         this.created = created;
+    }
+
+    public String getName() {
+        return name;
     }
 }

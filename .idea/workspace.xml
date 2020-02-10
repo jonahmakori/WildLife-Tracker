@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="745e1932-bf9f-445e-8993-c080aebfb136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/AnimalsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Animals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/AnimalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/AnimalsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +56,33 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AnimalsTest.TestThatInstanceOfAnimalIsCreated">
+  <component name="RunManager" selected="Gradle.AnimalsTest.TestThatAnimalInstantiatesWithName_Lion">
     <configuration name="AnimalsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;models.AnimalsTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AnimalsTest.TestThatAnimalInstantiatesWithName_Lion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;models.AnimalsTest.TestThatAnimalInstantiatesWithName_Lion&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -100,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AnimalsTest.TestThatAnimalInstantiatesWithName_Lion" />
         <item itemvalue="Gradle.AnimalsTest.TestThatInstanceOfAnimalIsCreated" />
         <item itemvalue="Gradle.AnimalsTest" />
       </list>
@@ -123,22 +143,22 @@
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="330" y="47" width="1000" height="846" key="#Project_Structure/70.34.1530.866@70.34.1530.866" timestamp="1581325684466" />
-    <state width="709" height="201" key="GridCell.Tab.0.bottom" timestamp="1581333543583">
+    <state width="709" height="201" key="GridCell.Tab.0.bottom" timestamp="1581340659063">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="709" height="201" key="GridCell.Tab.0.bottom/70.34.1530.866@70.34.1530.866" timestamp="1581333543583" />
-    <state width="709" height="201" key="GridCell.Tab.0.center" timestamp="1581333543582">
+    <state width="709" height="201" key="GridCell.Tab.0.bottom/70.34.1530.866@70.34.1530.866" timestamp="1581340659063" />
+    <state width="709" height="201" key="GridCell.Tab.0.center" timestamp="1581340659063">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="709" height="201" key="GridCell.Tab.0.center/70.34.1530.866@70.34.1530.866" timestamp="1581333543582" />
-    <state width="709" height="201" key="GridCell.Tab.0.left" timestamp="1581333543582">
+    <state width="709" height="201" key="GridCell.Tab.0.center/70.34.1530.866@70.34.1530.866" timestamp="1581340659062" />
+    <state width="709" height="201" key="GridCell.Tab.0.left" timestamp="1581340659062">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="709" height="201" key="GridCell.Tab.0.left/70.34.1530.866@70.34.1530.866" timestamp="1581333543582" />
-    <state width="709" height="201" key="GridCell.Tab.0.right" timestamp="1581333543582">
+    <state width="709" height="201" key="GridCell.Tab.0.left/70.34.1530.866@70.34.1530.866" timestamp="1581340659062" />
+    <state width="709" height="201" key="GridCell.Tab.0.right" timestamp="1581340659063">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="709" height="201" key="GridCell.Tab.0.right/70.34.1530.866@70.34.1530.866" timestamp="1581333543582" />
+    <state width="709" height="201" key="GridCell.Tab.0.right/70.34.1530.866@70.34.1530.866" timestamp="1581340659063" />
     <state x="936" y="238" width="542" height="472" key="chooseDestDirectoryDialog" timestamp="1581326088687">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
