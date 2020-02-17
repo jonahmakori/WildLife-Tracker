@@ -12,14 +12,14 @@
                 <input class="form-control input" type="text" placeholder="Enter the name of the ranger" name="ranger_name" autocomplete="off">
                 <select class="form-control input" name="animal" >
                     <option label="" hidden disabled selected value>Select animal...</option>
-                    {{#each   nonEndangeredanimal}}
+                    {{#each   nonEndangeredAnimal}}
                         <option value="{{id}}">{{name}}</option><br><br>
                     {{/each}}
                     {{#each endangeredAnimals}}
                         <option value="{{id}}">{{name}}</option><br><br>
                     {{/each}}
                 </select>
-                <select class="form-control input" name="Location">
+                <select class="form-control input" name="location">
                     <option label="" hidden disabled selected value>Enter location </option>
                     <option value="Zone A">Zone A</option>
                     <option value="Zone B">Zone B</option>
