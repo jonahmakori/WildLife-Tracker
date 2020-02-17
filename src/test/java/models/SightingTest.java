@@ -53,7 +53,7 @@ public class SightingTest{
 
     @Test
     public void save_insertsObjectIntoDatabase() {
-        Sighting testSighting = new Sighting(1,"zoneA","Justus");
+        Sighting testSighting = new Sighting(1,"zone A","Justus");
         testSighting.save();
         assertEquals(Sighting.getAll().get(0), testSighting);
     }

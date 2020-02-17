@@ -1,0 +1,20 @@
+{{#partial "content"}}
+
+    <div class="section">
+        <div class="form-left">
+            <h2>Add Animal</h2>
+            <div class="icon">
+                <img  src="/images/ja.jpg" alt="image">
+            </div>
+        </div>
+        <div class="form-right">
+            <h3>Add an animal</h3>
+            <form action="/animal/new" method="post" name="animalForm" class="form">
+                <input class="form-control input" type="text" placeholder="Enter the animal name..." name="animalName" autocomplete="off">
+                <button type="submit" class="button">Add</button>
+            </form>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

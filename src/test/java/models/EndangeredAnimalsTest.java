@@ -60,7 +60,7 @@ public class EndangeredAnimalsTest {
     public void save_insertsObjectIntoDatabase() {
         EndangeredAnimals testEndangeredAnimals = new EndangeredAnimals("Monkey","Ill","young");
         testEndangeredAnimals.save();
-        assertEquals(true,EndangeredAnimals.all().get(0).equals( testEndangeredAnimals));
+        assertEquals(EndangeredAnimals.all().get(0), testEndangeredAnimals);
     }
 
     @Test

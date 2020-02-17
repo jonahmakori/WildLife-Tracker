@@ -1,0 +1,33 @@
+{{#partial "content"}}
+    <div class="pages">
+        <h2 class="text-center">Sightings</h2>
+    {{#if sightings}}
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Animals'ID</th>
+                        <th>Location</th>
+                        <th>Ranger Name</th>
+                        <th>View Time</th>
+                    </tr>
+                    </thead>
+                    {{#each sightings }}
+                        <tbody>
+                        <tr>
+                            <td>{{ animal_Id }}</td>
+                            <td>{{ location }}</td>
+                            <td>{{ ranger_name }}</td>
+                            <td> {{view_time }}</td>
+                        </tr>
+                        </tbody>
+                    {{/each}}
+                </table>
+            </div>
+    {{else}}
+            <p>Hey Ranger!!!!! No sightings Available for now</p>
+            <a href="/sightings/form"  class="">Add sightings</a>
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

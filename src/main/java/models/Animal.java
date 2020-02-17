@@ -37,13 +37,12 @@ public abstract class Animal {
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO animals (name, type,health, age) VALUES (:name, :type,:health, :age)";
+            String sql = "INSERT INTO animals (name,type, health, age ) VALUES (:name, :type, :health, :age)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("type", this.type)
                     .addParameter("health", this.health)
                     .addParameter("age", this.age)
-                    .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
         }

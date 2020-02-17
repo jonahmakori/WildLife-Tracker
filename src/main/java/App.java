@@ -29,6 +29,11 @@ public class App {
             return new ModelAndView(model,"animal-form.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/animals", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model,"animal-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
         // posting animals form details
         post("/animals", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -40,7 +45,7 @@ public class App {
                 System.out.println("Please enter an animal name.");
             }
             response.redirect("/animals");
-            return new ModelAndView(model, "animal-form.hbs");
+            return new ModelAndView(model, "animalEdit-form.hbs");
         }, new HandlebarsTemplateEngine());
 
         //retrieving all animals
@@ -68,8 +73,7 @@ public class App {
             } catch (IllegalArgumentException exception) {
                 System.out.println("Please enter all input fields.");
             }
-            response.redirect("/animals");
-            return new ModelAndView(model, layout);
+            return new ModelAndView(model, "animalEdit-form.hbs");
         }, new HandlebarsTemplateEngine());
 
         //retrieving sighting form
