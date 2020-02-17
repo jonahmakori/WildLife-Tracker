@@ -1,65 +1,56 @@
 package models;
+
 import org.sql2o.Connection;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Animal {
+public abstract class Animal {
     public int id;
     public String name;
     public String type;
-    //creating animal with constant non endangered
-    public static final String ANIMAL_TYPE = "Non-endangered";
-
-    public Animal(String name){
-        if (name.equals("")){
-            //throw exception if no name is entered
-            throw new IllegalArgumentException("Please enter an animal name.");
-        }
-        this.name = name;
-
-        type = ANIMAL_TYPE;
-    }
+    private String age;
+    private String health;
 
 
-    public String getName(){
-        return name;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public String getType() {
         return type;
     }
-    // setting animal name
-    public void setName(String name) {
-        this.name = name;
+
+    public String getName() {
+        return name;
     }
 
-    // overriding Animal
-    @Override
-    public boolean equals(Object otherAnimal) {
-        if (otherAnimal instanceof Animal) {
-            Animal newAnimal = (Animal) otherAnimal;
-            return (this.getName().equals(newAnimal.getName()));
-        }
-
-        return false;
+    public int getId(){
+        return id;
     }
 
-    //saving a new animal by their name and type
+    public String getHealth() {
+        return health;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+
     public void save() {
-        String sql = "INSERT INTO animals (name, type) VALUES (:name, :type)";
         try(Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO animals (name, type,health, age) VALUES (:name, :type,:health, :age)";
             this.id = (int) con.createQuery(sql, true)
-                    .addParameter("name", name)
-                    .addParameter("type", type)
+                    .addParameter("name", this.name)
+                    .addParameter("type", this.type)
+                    .addParameter("health", this.health)
+                    .addParameter("age", this.age)
                     .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
         }
     }
+
+
+
 
     // deleting an animal and a sighting using their Id && throwing  exception incase the id is not mapped
     public void delete() {
@@ -77,39 +68,49 @@ public class Animal {
         }
     }
 
-    //Listing all animals from animals table
-    public static List<Animal> all() {
-        String sql = "SELECT * FROM animals;";
 
-        try (Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql)
-                    .throwOnMappingFailure(false)
-                    .executeAndFetch(Animal.class);
-        }
-    }
 
-    //finding an animal using its id && throwing  exception incase the id is not mapped
-    public static Animal find(int id) {
-        String sql = "SELECT * FROM animals WHERE id = :id;";
 
-        try (Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql)
-                    .addParameter("id", id)
-                    .throwOnMappingFailure(false)
-                    .executeAndFetchFirst(Animal.class);
-        }
-    }
-
-    //updating an animal using its Id && throwing an exception incase it is not mapped
-    public void update() {
-        String sql = "UPDATE animals SET name = :name WHERE id = :id";
+    public List<Object> getSightings() {
+        List<Object> allSightings = new ArrayList<Object>();
 
         try(Connection con = DB.sql2o.open()) {
-            con.createQuery(sql)
-                    .addParameter("name", name)
-                    .addParameter("id", id)
-                    .throwOnMappingFailure(false)
-                    .executeUpdate();
+            String sqlNonEndangeredAnimal = "SELECT * FROM sightings WHERE animal_Id=:id AND type='Non-endangered';";
+            List<NonEndangeredAnimal> nonEndangeredAnimal = con.createQuery(sqlNonEndangeredAnimal)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(NonEndangeredAnimal.class);
+            allSightings.addAll(nonEndangeredAnimal);
+
+            String sqlEndangeredAnimals = "SELECT * FROM sightings WHERE animal_Id=:id AND type='EndangeredAnimals';";
+            List<EndangeredAnimals> EndangeredAnimals = con.createQuery(sqlEndangeredAnimals)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(EndangeredAnimals.class);
+            allSightings.addAll(EndangeredAnimals);
+        }
+
+        return allSightings;
+    }
+
+
+    public List<NonEndangeredAnimal> getNonEndangeredAnimal() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings where nonEndangeredAnimalId=:id";
+            return con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(NonEndangeredAnimal.class);
         }
     }
+
+
+    public List<EndangeredAnimals> getEndangeredAnimals() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings where EndangeredAnimalsId=:id";
+            return con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(EndangeredAnimals.class);
+        }
+    }
+    //Overriding update method from Animal class for endangered animal
+    public abstract void update();
+
 }

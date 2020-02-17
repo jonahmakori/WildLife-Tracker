@@ -4,48 +4,85 @@ import org.sql2o.Connection;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 
-public class Sighting implements DatabaseManagement {
-
-    private int id;
-    private int animal_id;
+public class Sighting  {
+    private int id ;
+    private int animal_Id;
     private String location;
     private String ranger_name;
-    private Timestamp timestamp;
+    private Timestamp view_time;
 
-    // constructor for sighting which implements abstract method save in Database management class
+//     constructor for sighting which implements abstract method save in Database management class
 
-    public Sighting(int animal_id, String location, String ranger_name) {
+    public Sighting(String location, String ranger_name,int animal_Id) {
         if (ranger_name.equals("")) {
             throw new IllegalArgumentException("Please enter Ranger name.");
         }
-        this.animal_id = animal_id;
         this.location = location;
         this.ranger_name = ranger_name;
-
-        this.save();
+        this.animal_Id = animal_Id;
     }
+
+
+
+
+    public Sighting(int animal_Id, String location, String ranger_name) {
+        this.animal_Id = animal_Id;
+        this.id = id;
+        this.location = location;
+        this.ranger_name = ranger_name;
+    }
+
+    public Sighting(int animal_Id, int i, String location, String ranger_name) {
+    }
+
+    public static Object all() {
+        return all();
+    }
+
+
     //get methods
     public int getId(){
         return id;
     }
 
-    public int getAnimalId(){
-        return animal_id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Sighting)) return false;
+        Sighting sighting = (Sighting) o;
+        return getId() == sighting.getId() &&
+                Objects.equals(animal_Id, sighting.animal_Id) &&
+                Objects.equals(location, sighting.location) &&
+                Objects.equals(ranger_name, sighting.ranger_name) &&
+                Objects.equals(getViewTime(), sighting.getViewTime());
     }
 
-    public String getLocation(){
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), animal_Id, location, ranger_name, getViewTime());
+    }
+//    public int getEndangeredAnimalId() {
+//        return endangeredAnimal_id;
+//    }
+
+    public String getLocation()
+    {
         return location;
     }
 
-    public String getRangerName(){
+    public String getRangerName()
+    {
         return ranger_name;
     }
 
-    public String getTimeSeen(){
-        return String.format("%1$TD %1$TR", timestamp);
+    public Timestamp getViewTime() {
+        return view_time;
     }
+
+
 
     //set methods for Sightings
     public void setLocation(String location) {
@@ -58,62 +95,44 @@ public class Sighting implements DatabaseManagement {
 
     //Overriding save  method && implement method save() from Database management class
 
-    @Override
+
     public void save() {
-        String sql = "INSERT INTO sightings (animal_id, location, ranger_name, timestamp) VALUES (:animal_id, :location, :ranger_name, now());";
-        System.out.println("INSERT INTO sightings (animal_id, location, ranger_name, timestamp) VALUES (:animal_id, :location, :ranger_name, now());");
         try (Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO sightings(location, ranger_name, animal_Id) VALUES (:location, :ranger_name, :animal_Id)";
             this.id = (int) con.createQuery(sql, true)
-                    .addParameter("animal_id", this.animal_id)
                     .addParameter("location", this.location)
                     .addParameter("ranger_name", this.ranger_name)
+                    .addParameter("animal_Id",this.animal_Id)
+//                    .addParameter("view_time",this.view_time)
                     .executeUpdate()
                     .getKey();
         }
     }
 
     //Listing all sightings from  sightings table
-    public static List<Sighting> all() {
-        String sql = "SELECT * FROM sightings ORDER BY timestamp DESC;";
+    public static List<Sighting> getAll() {
+        String sql = "SELECT * FROM sightings";
 
         try (Connection con = DB.sql2o.open()) {
             return con.createQuery(sql)
-                    .throwOnMappingFailure(false)
                     .executeAndFetch(Sighting.class);
+
         }
     }
 
-    //Listing sighting by animal id
-    public static List<Sighting> allByAnimal(int animalId) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings WHERE animal_id = :animalId ORDER BY timestamp DESC";
-            return con.createQuery(sql)
-                    .addParameter("animalId", animalId)
-                    .executeAndFetch(Sighting.class);
-        }
-    }
-
-    //Overriding sighting
-    public boolean equals(Object otherSighting){
-        if(!(otherSighting instanceof Sighting)){
-            return false;
-        }else{
-            Sighting newSighting = (Sighting) otherSighting;
-            return this.getAnimalId()==newSighting.getAnimalId() && this.getRangerName().equals(newSighting.getRangerName());
-        }
-    }
 
     // finding a sighting using its id && with unchecked exception  that ensures index number entered by the user is within the range of the array.
     public static Sighting find(int id) {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings WHERE id=:id;";
+            String sql = "SELECT * FROM sightings WHERE id=:id";
             Sighting sighting = con.createQuery(sql)
                     .addParameter("id", id)
                     .executeAndFetchFirst(Sighting.class);
             return sighting;
-        } catch (IndexOutOfBoundsException exception) {
-            return null;
         }
+//         catch (IndexOutOfBoundsException exception) {
+//            return null;
+//        }
     }
 
     //implement method delete() from Database management class
@@ -126,14 +145,15 @@ public class Sighting implements DatabaseManagement {
         }
     }
 
-    //update the Sightings table && throwing an exception incase the id is not mapped
+    //update the Sightings table && throwing an exception in case the id is not mapped
     public void update() {
-        String sql = "UPDATE sightings SET location = :location, ranger_name = :ranger_name WHERE id = :id";
+        String sql = "UPDATE sightings SET location = :location, ranger_name = :ranger_name, animal_Id = :animal_Id, view_time = :view_time WHERE id = :id";
 
         try(Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("location", location)
-                    .addParameter("rangername", ranger_name)
+                    .addParameter("ranger_name", ranger_name)
+                    .addParameter("animal_Id",this.animal_Id)
                     .addParameter("id", id)
                     .throwOnMappingFailure(false)
                     .executeUpdate();

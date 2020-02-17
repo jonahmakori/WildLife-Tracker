@@ -2,7 +2,7 @@ package models;
 import org.sql2o.Sql2o;
 
 public class DB {
-    public static Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker","jonahmakori","jonah1ma");
+    public static Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker","jonah","jonah1ma");
 
 }
 
@@ -27,10 +27,10 @@ public class DB {
 //            int port = dbUri.getPort();
 //            String host = dbUri.getHost();
 //            String path = dbUri.getPath();
-//            String username = (dbUri.getUserInfo() == null) ? "alpha" : dbUri.getUserInfo().split(":")[0];
-//            String password = (dbUri.getUserInfo() == null) ? "pw*0711937973" : dbUri.getUserInfo().split(":")[1];
+//            String username = (dbUri.getUserInfo() == null) ? "jonah" : dbUri.getUserInfo().split(":")[0];
+//            String password = (dbUri.getUserInfo() == null) ? "jonah1ma" : dbUri.getUserInfo().split(":")[1];
 //
-//            sql2o = new Sql2o("jdbc:postgresql://" + host + ":" + port + path, username, password);
+//            sql2o = new Sql2o("jdbc:postgresql://" + host + ":" + port + path, "jonah", "jonah1ma");
 //        } catch (URISyntaxException e ) {
 //        }
 //    }
