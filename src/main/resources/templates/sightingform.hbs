@@ -13,15 +13,24 @@
                 <select class="form-control input" name="animal_Id" >
                     <option label="" hidden disabled selected value>Select animal...</option>
                     {{#if allEndangered}}
+                    <div class="card" style="background-color:grey">
+                        <h3 class="text-center" id="wildlife-title" style="color:red;">Endangered Animals:</h3>
                         {{#each allEndangered}}
+
                             <option value="{{id}}">{{name}}</option><br><br>
+
                         {{/each}}
+                    </div>
                     {{/if}}
 
                     {{#if nonEndangeredAnimal}}
+                    <div class="card" style="background-color:brown">
+                        <h3 class="text-center" id="wildlife-title" style="color:red;">NonEndangered Animals:</h3>
                     {{#each nonEndangeredAnimal}}
                         <option value="{{id}}">{{name}}</option><br><br>
+
                     {{/each}}
+                    </div>
                     {{/if}}
 
                 </select>
