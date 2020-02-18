@@ -88,17 +88,17 @@ public class NonEndangeredAnimalTest {
     }
 
 
-//
+
 //    @Test
 //    public void getSightings_retrievesAllSightingsFromDatabase_sightingsList() {
-//        NonEndangeredAnimal testNonEndangeredAnimal = new NonEndangeredAnimal("Lion");
-//        testNonEndangeredAnimal.save();
-//        Sighting firstSighting = new Sighting(1,"Zone B","Jonah");
-//        firstSighting.save();
-//        Sighting secondSighting = new Sighting(1,"Zone C","Evans");
-//        secondSighting.save();
-//        Sighting[] sightings = new Sighting[] { firstSighting, secondSighting };
-//        assertTrue(testNonEndangeredAnimal.getSightings().containsAll(Arrays.asList(sightings)));
+//        Sighting testSighting = new Sighting(1,"Zone B","Jonah");
+//        testSighting.save();
+//        NonEndangeredAnimal firstNonEndangeredAnimal = new NonEndangeredAnimal("Monkey");
+//        firstNonEndangeredAnimal.save();
+//        NonEndangeredAnimal secondNonEndangeredAnimal = new NonEndangeredAnimal("Lion");
+//        secondNonEndangeredAnimal.save();
+//        NonEndangeredAnimal[] nonEndangeredAnimal = new NonEndangeredAnimal[] { firstNonEndangeredAnimal, secondNonEndangeredAnimal };
+//        assertTrue(testSighting.getNonEndangeredAnimals().containsAll(Arrays.asList(nonEndangeredAnimal)));
 //    }
 
 

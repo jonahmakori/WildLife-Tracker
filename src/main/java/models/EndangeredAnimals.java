@@ -4,16 +4,12 @@ import org.sql2o.Connection;
 
 import java.util.List;
 import java.util.Objects;
-// endangered animal extends animal but with new attributes age and health
 
 public class EndangeredAnimals extends Animal {
-    public String name;
-    public String health;
-    public String age;
-    public int id;
-    public static final String ANIMAL_TYPE = "EndangeredAnimals";
+    private String age;
+    private String health;
+    public static final String ANIMAL_TYPE = "Endangered";
 
-    // constructor with animal attributes and new attributes for endangered animal
     public EndangeredAnimals(String name, String health, String age) {
         if (name.equals("") || health.equals("") || age.equals("")){
             throw new IllegalArgumentException("Please enter all input fields.");
@@ -24,15 +20,10 @@ public class EndangeredAnimals extends Animal {
         this.id = id;
         type = ANIMAL_TYPE;
     }
-
-    //get methods for endangered animal
     public String getHealth() {
         return health;
     }
 
-    public String getName() {
-        return name;
-    }
     public String getAge() {
         return age;
     }
@@ -41,62 +32,46 @@ public class EndangeredAnimals extends Animal {
         this.health = health;
     }
 
-    //set method for endangered animals age
     public void setAge(String age) {
         this.age = age;
     }
 
-    // overriding endangered animal
 
-//
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-       if(o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof EndangeredAnimals)) return false;
         EndangeredAnimals that = (EndangeredAnimals) o;
-        return id == that.id &&
-                name.equals(that.name) &&
-                health.equals(that.health) &&
-                age.equals(that.age);
+        return getAge().equals(that.getAge()) &&
+                getHealth().equals(that.getHealth());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, health, age, id);
+        return Objects.hash(getAge(), getHealth());
     }
 
-
-
-
-//    @Override
-//    public boolean equals(Object otherEndangeredAnimals) {
-//        if (otherEndangeredAnimals instanceof EndangeredAnimals) {
-//            EndangeredAnimals newEndangeredAnimals = (EndangeredAnimals) otherEndangeredAnimals;
-//            return (this.getName().equals(newEndangeredAnimals.getName()));
-//        }
-//
-//        return false;
-//    }
-
-
-
-
-
-
-
+    @Override
+    public void save() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO animals (name,type, health, age ) VALUES (:name, :type, :health, :age)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("name", this.name)
+                    .addParameter("type", this.type)
+                    .addParameter("health", this.health)
+                    .addParameter("age", this.age)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }
     public static List<EndangeredAnimals> all() {
-        String sql = "SELECT * FROM animals WHERE type='EndangeredAnimals';";
+        String sql = "SELECT * FROM animals WHERE type='Endangered';";
         try (Connection con = DB.sql2o.open()) {
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)
                     .executeAndFetch(EndangeredAnimals.class);
         }
     }
-
-
-
-
-    // finding endangered animal with a static type that will apply to animal class too
     public static EndangeredAnimals find(int id) {
         try(Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM animals WHERE id = :id";
@@ -106,8 +81,6 @@ public class EndangeredAnimals extends Animal {
                     .executeAndFetchFirst(EndangeredAnimals.class);
         }
     }
-
-    //Overriding update method from Animal class for endangered animal
     @Override
     public void update() {
         try(Connection con = DB.sql2o.open()) {

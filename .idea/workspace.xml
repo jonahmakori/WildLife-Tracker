@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="745e1932-bf9f-445e-8993-c080aebfb136" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/EndangeredAnimals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/EndangeredAnimals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/NonEndangeredAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NonEndangeredAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Sighting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Sighting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animal.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animal.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animalSuccess.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animalSuccess.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animalform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animalform.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/endangeredanimal.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/endangeredanimal.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/endangeredform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/endangeredform.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightingSuccess.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightingSuccess.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightingform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightingform.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightings.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightings.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/EndangeredAnimalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/EndangeredAnimalsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/NonEndangeredAnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/NonEndangeredAnimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/SightingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/SightingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,53 +101,13 @@
       <recent name="models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.EndangeredAnimalsTest">
-    <configuration name="EndangeredAnimalsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EndangeredAnimalsTest.getType_animalInstantiatesWithType_Type">
+    <configuration name="EndangeredAnimalsTest.getType_animalInstantiatesWithType_Type" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.EndangeredAnimalsTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="EndangeredAnimalsTest.all_returnsAllInstancesOfAnimal" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.EndangeredAnimalsTest.all_returnsAllInstancesOfAnimal&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="EndangeredAnimalsTest.save_assignsIdToObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.EndangeredAnimalsTest.save_assignsIdToObject&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.EndangeredAnimalsTest.getType_animalInstantiatesWithType_Type&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -164,12 +142,52 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NonEndangeredAnimalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SightingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.NonEndangeredAnimalTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.SightingTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SightingTest.find_returnsSightingWithSameId_secondSighting" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;models.SightingTest.find_returnsSightingWithSameId_secondSighting&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SightingTest.save_savesEndangeredAnimalIdIntoDB_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;models.SightingTest.save_savesEndangeredAnimalIdIntoDB_true&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -186,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EndangeredAnimalsTest" />
+        <item itemvalue="Gradle.EndangeredAnimalsTest.getType_animalInstantiatesWithType_Type" />
+        <item itemvalue="Gradle.SightingTest.find_returnsSightingWithSameId_secondSighting" />
         <item itemvalue="Gradle.EndangeredAnimalsTest.save_insertsObjectIntoDatabase" />
-        <item itemvalue="Gradle.EndangeredAnimalsTest.all_returnsAllInstancesOfAnimal" />
-        <item itemvalue="Gradle.NonEndangeredAnimalTest" />
-        <item itemvalue="Gradle.EndangeredAnimalsTest.save_assignsIdToObject" />
+        <item itemvalue="Gradle.SightingTest" />
+        <item itemvalue="Gradle.SightingTest.save_savesEndangeredAnimalIdIntoDB_true" />
       </list>
     </recent_temporary>
   </component>
@@ -215,22 +233,26 @@
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="330" y="47" width="1000" height="846" key="#Project_Structure/70.34.1530.866@70.34.1530.866" timestamp="1581432352265" />
+    <state x="330" y="47" width="1000" height="846" key="#Template_Data_Languages" timestamp="1581962121710">
+      <screen x="70" y="34" width="1530" height="866" />
+    </state>
+    <state x="330" y="47" width="1000" height="846" key="#Template_Data_Languages/70.34.1530.866@70.34.1530.866" timestamp="1581962121710" />
     <state x="773" y="254" width="817" height="432" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581417153905">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="773" y="254" width="817" height="432" key="#com.intellij.fileTypes.FileTypeChooser/70.34.1530.866@70.34.1530.866" timestamp="1581417153905" />
-    <state x="978" y="112" width="468" height="717" key="#com.intellij.ide.util.MemberChooser" timestamp="1581694595670">
+    <state x="978" y="112" width="468" height="717" key="#com.intellij.ide.util.MemberChooser" timestamp="1582008777431">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state x="978" y="112" width="468" height="717" key="#com.intellij.ide.util.MemberChooser/70.34.1530.866@70.34.1530.866" timestamp="1581694595670" />
+    <state x="978" y="112" width="468" height="717" key="#com.intellij.ide.util.MemberChooser/70.34.1530.866@70.34.1530.866" timestamp="1582008777431" />
     <state x="880" y="205" width="655" height="597" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1581770734173">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="880" y="205" width="655" height="597" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/70.34.1530.866@70.34.1530.866" timestamp="1581770734173" />
-    <state x="108" y="34" width="1443" height="866" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581659667290">
+    <state x="108" y="34" width="1443" height="866" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581947490774">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state x="108" y="34" width="1443" height="866" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.34.1530.866@70.34.1530.866" timestamp="1581659667290" />
+    <state x="108" y="34" width="1443" height="866" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.34.1530.866@70.34.1530.866" timestamp="1581947490774" />
     <state x="502" y="157" width="655" height="626" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581683256183">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
@@ -239,38 +261,38 @@
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="502" y="157" width="655" height="626" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/70.34.1530.866@70.34.1530.866" timestamp="1581657720901" />
-    <state width="1474" height="44" key="GridCell.Tab.0.bottom" timestamp="1581922747248">
+    <state width="1474" height="272" key="GridCell.Tab.0.bottom" timestamp="1582007189508">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="44" key="GridCell.Tab.0.bottom/70.34.1530.866@70.34.1530.866" timestamp="1581922747248" />
-    <state width="1474" height="44" key="GridCell.Tab.0.center" timestamp="1581922747247">
+    <state width="1474" height="272" key="GridCell.Tab.0.bottom/70.34.1530.866@70.34.1530.866" timestamp="1582007189508" />
+    <state width="1474" height="272" key="GridCell.Tab.0.center" timestamp="1582007189507">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="44" key="GridCell.Tab.0.center/70.34.1530.866@70.34.1530.866" timestamp="1581922747247" />
-    <state width="1474" height="44" key="GridCell.Tab.0.left" timestamp="1581922747246">
+    <state width="1474" height="272" key="GridCell.Tab.0.center/70.34.1530.866@70.34.1530.866" timestamp="1582007189507" />
+    <state width="1474" height="272" key="GridCell.Tab.0.left" timestamp="1582007189507">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="44" key="GridCell.Tab.0.left/70.34.1530.866@70.34.1530.866" timestamp="1581922747246" />
-    <state width="1474" height="44" key="GridCell.Tab.0.right" timestamp="1581922747247">
+    <state width="1474" height="272" key="GridCell.Tab.0.left/70.34.1530.866@70.34.1530.866" timestamp="1582007189507" />
+    <state width="1474" height="272" key="GridCell.Tab.0.right" timestamp="1582007189508">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="44" key="GridCell.Tab.0.right/70.34.1530.866@70.34.1530.866" timestamp="1581922747247" />
-    <state width="1474" height="404" key="GridCell.Tab.1.bottom" timestamp="1581915740738">
+    <state width="1474" height="272" key="GridCell.Tab.0.right/70.34.1530.866@70.34.1530.866" timestamp="1582007189508" />
+    <state width="1474" height="154" key="GridCell.Tab.1.bottom" timestamp="1581949384110">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="404" key="GridCell.Tab.1.bottom/70.34.1530.866@70.34.1530.866" timestamp="1581915740738" />
-    <state width="1474" height="404" key="GridCell.Tab.1.center" timestamp="1581915740738">
+    <state width="1474" height="154" key="GridCell.Tab.1.bottom/70.34.1530.866@70.34.1530.866" timestamp="1581949384110" />
+    <state width="1474" height="154" key="GridCell.Tab.1.center" timestamp="1581949384109">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="404" key="GridCell.Tab.1.center/70.34.1530.866@70.34.1530.866" timestamp="1581915740738" />
-    <state width="1474" height="404" key="GridCell.Tab.1.left" timestamp="1581915740738">
+    <state width="1474" height="154" key="GridCell.Tab.1.center/70.34.1530.866@70.34.1530.866" timestamp="1581949384109" />
+    <state width="1474" height="154" key="GridCell.Tab.1.left" timestamp="1581949384109">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="404" key="GridCell.Tab.1.left/70.34.1530.866@70.34.1530.866" timestamp="1581915740738" />
-    <state width="1474" height="404" key="GridCell.Tab.1.right" timestamp="1581915740738">
+    <state width="1474" height="154" key="GridCell.Tab.1.left/70.34.1530.866@70.34.1530.866" timestamp="1581949384109" />
+    <state width="1474" height="154" key="GridCell.Tab.1.right" timestamp="1581949384110">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state width="1474" height="404" key="GridCell.Tab.1.right/70.34.1530.866@70.34.1530.866" timestamp="1581915740738" />
+    <state width="1474" height="154" key="GridCell.Tab.1.right/70.34.1530.866@70.34.1530.866" timestamp="1581949384110" />
     <state x="303" y="160" width="1053" height="621" key="caller.chooser.dialog" timestamp="1581683260449">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
@@ -287,6 +309,10 @@
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="905" y="120" width="614" height="701" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.34.1530.866@70.34.1530.866" timestamp="1581591625258" />
+    <state x="289" y="34" width="1311" height="505" key="dock-window-1" timestamp="1582004990967">
+      <screen x="70" y="34" width="1530" height="866" />
+    </state>
+    <state x="289" y="34" width="1311" height="505" key="dock-window-1/70.34.1530.866@70.34.1530.866" timestamp="1582004990967" />
     <state x="900" y="34" width="625" height="866" key="refactoring.ChangeSignatureDialog" timestamp="1581572164378">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
@@ -295,28 +321,14 @@
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="415" y="205" key="run.anything.popup/70.34.1530.866@70.34.1530.866" timestamp="1581769543544" />
-    <state x="414" y="33" width="840" height="1034" key="search.everywhere.popup" timestamp="1581768347037">
+    <state x="414" y="33" width="840" height="1034" key="search.everywhere.popup" timestamp="1582009880374">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
-    <state x="414" y="33" width="840" height="1034" key="search.everywhere.popup/70.34.1530.866@70.34.1530.866" timestamp="1581768347037" />
+    <state x="414" y="33" width="840" height="1034" key="search.everywhere.popup/70.34.1530.866@70.34.1530.866" timestamp="1582009880374" />
     <state x="509" y="385" width="594" height="206" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1581767594765">
       <screen x="70" y="34" width="1530" height="866" />
     </state>
     <state x="509" y="385" width="594" height="206" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/70.34.1530.866@70.34.1530.866" timestamp="1581767594765" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/models/SightingTest.java</url>
-          <line>26</line>
-          <properties class="models.SightingTest" method="getLocation_sightingInstantiatesWithLocation">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WildLife_Tracker$SightingTest_save_insertsObjectIntoDatabase.ic" NAME="SightingTest.save_insertsObjectIntoDatabase Coverage Results" MODIFIED="1581691290747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

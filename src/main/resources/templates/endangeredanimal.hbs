@@ -2,9 +2,11 @@
 
     <div class="pages">
         <h2 class="text-center">Endangered Animals</h2>
-    {{#if endangeredAnimals}}
-            <div>
+    {{#if endangered}}
+        <div class="card">
+            <h3 class="text-center" id="wildlife-title" style="color:red;">Available Animals:</h3>
                 <div class="card p-4 mt-4">
+                    <table>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -12,25 +14,27 @@
                         <th>Health</th>
                         <th>Type</th>
                     </tr>
-                    </thead>
-                    {{#each endangeredAnimals}}
-                        <tbody>
+
+                    {{#each endangered}}
+
                         <tr>
                             <td>{{ id }}</td>
                             <td>{{ name }}</td>
-                            <td>{{ age}}</td>
+                            <td>{{ age }}</td>
                             <td>{{ health }}</td>
                             <td>{{ type }}</td>
                         </tr>
-                        </tbody>
+
+
                     {{/each}}
+                    </table>
                 </div>
-            </div>
+            <a href="/endangered/form" class="">Report Another Endangered-Animal Sighting</a>
     {{else}}
             <p style="color:green"> No Endangered Animal .Look Around Ranger!!!!</p>
-            <a href="/endangered/form" class="">Add animal</a>
         </div>
     {{/if}}
+    </div>
 {{/partial}}
 {{> layout.hbs}}
 

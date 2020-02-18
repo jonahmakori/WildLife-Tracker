@@ -1,22 +1,33 @@
 {{#partial "content"}}
     <div class="page">
         <h2 class="text-center">Non Endangered Animals</h2>
-        {{#if nonEndangeredAnimal}}
+        {{#if animals}}
             <div class="card">
-                <h3 class="text-center" id="hero-title" style="color:red;">Available Animals:</h3>
-                <div class="text-center">
+                <h3 class="text-center" id="hero-title" style="color:red;">Reported Animals:</h3>
+            <div class="card p-4 mt-4">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                </tr>
+        {{#each animals }}
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ type }}</td>
+            </tr>
 
-        {{#each nonEndangeredAnimal }}
-                <p>AnimalId:{{ id }}</p>
-                <p>AnimalName:{{ name }}</p>
-                <p>Animal Type:{{ type }}</p>
+
         {{/each}}
-                </div>
+        </table>
+                <a href="/animals/form"><b style="color:red;">NonEndangered Animals</b></a>
             </div>
         {{else}}
                 <p>Hey!!Ranger no animal Added</p>
-                <a href="/animal/form">Add animal</a>
+                <a href="/animals/form">Add animal</a>
     </div>
         {{/if}}
+    </div>
 {{/partial}}
 {{> layout.hbs}}

@@ -1,33 +1,24 @@
 {{#partial "content"}}
     <div class="pages">
         <h2 class="text-center">Sightings</h2>
-    {{#if sighting}}
-            <div>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Animals'ID</th>
-                        <th>Location</th>
-                        <th>Ranger Name</th>
-                        <th>View Time</th>
-                    </tr>
-                    </thead>
-                    {{#each sighting }}
-                        <tbody>
-                        <tr>
-                            <td>{{ animal_Id }}</td>
-                            <td>{{ location }}</td>
-                            <td>{{ ranger_name }}</td>
-                            <td> {{view_time }}</td>
-                        </tr>
-                        </tbody>
-                    {{/each}}
-                </table>
+
+            <h2 class="text-center"><b><i>Current Sightings</i></b></h2>
+                <div class="card">
+                    {{#if sightings}}
+                        {{#each sightings }}
+                            <p> Animal Id: {{ animal_Id }}</p>
+                            <p>Location: {{ location }}</p>
+                            <p>Ranger Name: {{ ranger_name }}</p>
+                            <p> ViewTime{{view_time }}</p>
+                        {{/each}}
+                    {{/if}}
+
+                </div>
             </div>
-    {{else}}
+
             <p>Hey Ranger!!!!! No sightings Available for now</p>
             <a href="/sightings/form"  class="">Add sightings</a>
         </div>
-    {{/if}}
+
 {{/partial}}
 {{> layout.hbs}}

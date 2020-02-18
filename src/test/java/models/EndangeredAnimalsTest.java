@@ -38,7 +38,7 @@ public class EndangeredAnimalsTest {
     @Test
     public void getType_animalInstantiatesWithType_Type() {
         EndangeredAnimals testEndangeredAnimals = new EndangeredAnimals("Monkey","Ill","young");
-        assertEquals("EndangeredAnimals", testEndangeredAnimals.getType());
+        assertEquals("Endangered", testEndangeredAnimals.getType());
     }
 
     @Test

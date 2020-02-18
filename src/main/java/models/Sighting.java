@@ -1,3 +1,4 @@
+
 package models;
 
 import org.sql2o.Connection;
@@ -25,7 +26,9 @@ public class Sighting  {
         this.animal_Id = animal_Id;
     }
 
-
+    public String getRanger_name() {
+        return ranger_name;
+    }
 
 
     public Sighting(int animal_Id, String location, String ranger_name) {
@@ -42,12 +45,16 @@ public class Sighting  {
         return all();
     }
 
-
+    public int getAnimal_Id() {
+        return animal_Id;
+    }
     //get methods
     public int getId(){
         return id;
     }
-
+    public Timestamp getView_time() {
+        return view_time;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -98,7 +105,7 @@ public class Sighting  {
 
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sightings(location, ranger_name, animal_Id) VALUES (:location, :ranger_name, :animal_Id)";
+            String sql = "INSERT INTO sightings(location, ranger_name, animal_Id, view_time) VALUES (:location, :ranger_name, :animal_Id, now())";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("location", this.location)
                     .addParameter("ranger_name", this.ranger_name)

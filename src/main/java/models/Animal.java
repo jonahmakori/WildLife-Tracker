@@ -9,9 +9,6 @@ public abstract class Animal {
     public int id;
     public String name;
     public String type;
-    private String age;
-    private String health;
-
 
 
     public String getType() {
@@ -26,32 +23,17 @@ public abstract class Animal {
         return id;
     }
 
-    public String getHealth() {
-        return health;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO animals (name,type, health, age ) VALUES (:name, :type, :health, :age)";
+            String sql = "INSERT INTO animals (name,type) VALUES (:name, :type)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("type", this.type)
-                    .addParameter("health", this.health)
-                    .addParameter("age", this.age)
                     .executeUpdate()
                     .getKey();
         }
     }
-
-
-
-
-    // deleting an animal and a sighting using their Id && throwing  exception incase the id is not mapped
     public void delete() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "DELETE from animals WHERE id = :id";
@@ -109,7 +91,6 @@ public abstract class Animal {
                     .executeAndFetch(EndangeredAnimals.class);
         }
     }
-    //Overriding update method from Animal class for endangered animal
     public abstract void update();
 
 }

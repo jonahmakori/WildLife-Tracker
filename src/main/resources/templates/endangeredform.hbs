@@ -10,20 +10,20 @@
         <div class="form-group">
             <h3>Add an animal</h3>
             <form action="/endangered/new" method="post" name="animalForm" class="form">
-                <input class="form-control input" type="text" placeholder="Enter the name of animal" name="Name">
-                <select class="form-control input" name="health">
+                <input class="form-control input" type="text" placeholder="Enter the name of animal" name="name" required>
+                <select class="form-control input" name="health" required>
                     <option>Choose healthy Status</option>
                     <option value="Healthy">Healthy</option>
                     <option value="Ill">Ill</option>
                     <option value="Okay">Okay</option>
                 </select>
-                <select class="form-control input" name="age">
+                <select class="form-control input" name="age" required>
                     <option label="" hidden disabled selected value>Choose age level...</option>
                     <option value="Newborn">Newborn</option>
                     <option value="Young">Young</option>
                     <option value="Adult">Adult</option>
                 </select>
-                <button type="submit" class="button">Add</button>
+                <button type="submit" class="button">Add Animal</button>
             </form>
         </div>
     </div>
