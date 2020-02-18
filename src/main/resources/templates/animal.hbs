@@ -2,7 +2,7 @@
     <div class="page">
         <h2 class="text-center">Non Endangered Animals</h2>
         {{#if animals}}
-            <div class="card">
+            <div class="card" style="">
                 <h3 class="text-center" id="hero-title" style="color:red;">Reported Animals:</h3>
             <div class="card p-4 mt-4">
             <table>
@@ -21,13 +21,13 @@
 
         {{/each}}
         </table>
-                <a href="/animals/form"><b style="color:red;">NonEndangered Animals</b></a>
+        {{/if}}
             </div>
+            <label>  <a href="/animals/form"><b style="color:red;">Add Another Animal</b></a></label>
         {{else}}
                 <p>Hey!!Ranger no animal Added</p>
                 <a href="/animals/form">Add animal</a>
     </div>
-        {{/if}}
     </div>
 {{/partial}}
 {{> layout.hbs}}
